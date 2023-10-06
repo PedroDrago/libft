@@ -1,3 +1,7 @@
+# Documentation
+- Atualizar descrições de cada função na tabela do readme (copiar as descrições que estão nas documentações de cada arquivo .c
+
+# Code
 ### Part 1 - Libc Functions
 - ~~isalpha~~
 - ~~isdigit~~
