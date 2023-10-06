@@ -1,7 +1,5 @@
 # Libft
-This project goal is to write my own library in C, with some reproductions of libc, stdlib and other sources functions.
-
-This readme will act as a documentation for this libary
+This project goal is to write my own C library , with some reproductions of libc, stdlib and other sources functions.
 
 | Function                       | Description                                                                                                                                                                                                          | External Functions   |
 | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
