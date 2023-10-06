@@ -16,11 +16,11 @@
 - ~~atoi~~
 - ~~strncmp~~
 - ~~strdup~~
+- ~~calloc~~ (se ft_bzero tiver certo, calloc ta certo tbm)
 - strlcpy
 - strlcat
 - memmove
 - strnstr
-- ~~calloc~~ (se ft_bzero tiver certo, calloc ta certo tbm)
 
 **Not quite sure**
 - ~~memchr~~
@@ -34,10 +34,12 @@
 - ~~ft_substr~~ (duvida a respeito de null-terminating byte)
 - ~~ft_strjoin~~
 - ~~ft_strtrim~~ (ta feio o codigo)
-- ~~ft_split~~ (Ta com memory leak eu acho, e ta feio pra caralho)
 - ft_itoa
 - ft_strmapi
 - ft_striteri
+
+**Not quite sure**
+- ~~ft_split~~ (Ta com memory leak eu acho, e ta feio pra caralho)
 - ~~ft_putchar_fd~~ (duvida sobre fd?)
 - ~~ft_putstr_fd~~ (duvida sobre fd?)
 - ~~ft_putendl_fd~~ (duvida sobre fd?)
@@ -49,6 +51,7 @@
 - Usar uma função da propria libft dentro de outra função da libft: em `ft_strdup` usei `ft_strlen`
 - Nas funções de escrever em um file descriptor especifico, é realmente só usar write com `fd` como variável?
 - Memory leak na `ft_split` está só na main?
+- Funções como argumento de funções????
 
 ### Bonus part
 - ft_lstnew
