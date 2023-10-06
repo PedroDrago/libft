@@ -3,42 +3,42 @@ This project goal is to write my own library in C, with some reproductions of li
 
 This readme will act as a documentation for this libary
 
-| Function      | Description                                                       | External Functions |
-| ------------- | ----------------------------------------------------------------- | ------------------ |
-| [ft_isalpha](ft_isalpha.c)    | Check if a character is alphabetic                                | N/A|
-| [ft_isdigit](ft_isdigit.c)    | Check if a character is a digit                                   | N/A               |
-| [ft_isalnum](ft_isalnum.c)   | check if a character is alphanumeric                              | N/A                    |
-| [ft_isascii](ft_isascii.c)    | check if c is in ASCII range                                      | N/A                    |
-| [ft_isprint](ft_isprint.c)    | check if a character is printable                                 | N/A                |
-| [ft_strlen](ft_strlen.c)     | return the length of a string excluding the terminating null byte | N/A                    |
-| [ft_memset](ft_memset.c)     |                                                                   |                    |
-| [ft_bzero](ft_bzero.c)      |                                                                   |                    |
-| [ft_memcpy](ft_memcpy)     |                                                                   |                    |
-| [ft_memmove](ft_memmove)    |                                                                   |                    |
-| [ft_strlcpy](ft_strlcpy)    |                                                                   |                    |
-| [ft_strlcat](ft_strlcat)    |                                                                   |                    |
-| [ft_toupper](ft_toupper.c)   | Converts a letter to its uppercase equivalent                     |                    |
-| [ft_tolower](ft_tolower.c)    | Converts a letter to its lowercase equivalent                     |                    |
-| [ft_strchr](ft_strchr.c)     | Returns a pointer to the first occurrence of a character          |                    |
-| [ft_strrchr](ft_strrchr.c)    | Returns a pointer to the last occurrence of a character           |                    |
-| [ft_strncmp](ft_strncmp.c)    | Compares two strings                                              |                    |
-| [ft_memchr](ft_memchr.c)    |                                                                   |                    |
-| [ft_memcmp](ft_memcmp.c)     |                                                                   |                    |
-| [ft_strnstr](ft_strnstr.c)    |                                                                   |                    |
-| [ft_atoi](ft_atoi.c)       | Converts the initial portion of a string to `int`                  |                    |
-| [ft_calloc](ft_calloc.c)     |                                                                   |                    |
-| [ft_strdup](ft_strdup.c)     |                                                                   |                    |
-| [ft_substr](ft_substr.c)     |                                                                   |                    |
-| [ft_strjoin](ft_strjoin.c)   |                                                                   |                    |
-| [ft_strtrim](ft_strtrim.c)    |                                                                   |                    |
-| [ft_split](ft_split.c)      |                                                                   |                    |
-| [ft_itoa](ft_itoa.c)       |                                                                   |                    |
-| [ft_strmapi](ft_strmapi)    |                                                                   |                    |
-| [ft_striteri](ft_striteri)  |                                                                   |                    |
-| [ft_putchar_fd](ft_putchar_fd)|                                                                   |                    |
-| [ft_putstr_fd](ft_putstr_fd) |                                                                   |                    |
-| [ft_putendl_fd](ft_putendl_fd) |                                                                   |                    |
-| [ft_putnbr_fd](ft_putnbr_fd)  |                                                                   |                    |
+| Function                       | Description                                                                                                                                                                                                          | External Functions   |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| [ft_isalpha](ft_isalpha.c)     | Checks for an alphabetic character.                                                                                                                                                                                  | N/A                  |
+| [ft_isdigit](ft_isdigit.c)     | Checks for a digit (0 through 0).                                                                                                                                                                                    | N/A                  |
+| [ft_isalnum](ft_isalnum.c)     | Checks for an alphanumeric character.                                                                                                                                                                                | N/A                  |
+| [ft_isascii](ft_isascii.c)     | Checks whether `c` is a 7-bit unsigned char value that fits into the ASCII character set.                                                                                                                            | N/A                  |
+| [ft_isprint](ft_isprint.c)     | Checks for any printable character including space.                                                                                                                                                                  | N/A                  |
+| [ft_strlen](ft_strlen.c)       | Calculates and returns the length of a string, excluding the terminating null byte ('\\0').                                                                                                                          | N/A                  |
+| [ft_memset](ft_memset.c)       | Fills the first `n` bytes of a memory area with the byte `c`.                                                                                                                                                        | N/A                  |
+| [ft_bzero](ft_bzero.c)         | Erases the data in the `n` bytes of a memory area by writing zeros ('\\0' bytes) to that area.                                                                                                                       | N/A                  |
+| [ft_memcpy](ft_memcpy)         | Copies `n` bytes from a source memory area to a destine memory area. The areas may not overlap.                                                                                                                      | N/A                  |
+| [ft_memmove](ft_memmove)       | Copies `n` bytes from a source memory area to a destine memory area. The areas may overlap.                                                                                                                          | N/A                  |
+| [ft_strlcpy](ft_strlcpy)       | Copies up to `size - 1` characters from the NUL-terminated source string to a destine string, NUL-terminating the result.                                                                                            | N/A                  |
+| [ft_strlcat](ft_strlcat)       | Appends at most `size - ft_strlen(destine - 1)` bytes from a NUL-terminated source string to the end of a destine string.                                                                                            | N/A                  |
+| [ft_toupper](ft_toupper.c)     | Converts a letter to its uppercase equivalent.                                                                                                                                                                       | N/A                  |
+| [ft_tolower](ft_tolower.c)     | Converts a letter to its lowercase equivalent.                                                                                                                                                                       | N/A                  |
+| [ft_strchr](ft_strchr.c)       | Returns a pointer to the first occurrence of a character.                                                                                                                                                            | N/A                  |
+| [ft_strrchr](ft_strrchr.c)     | Returns a pointer to the last occurrence of a character.                                                                                                                                                             | N/A                  |
+| [ft_strncmp](ft_strncmp.c)     | Compares two strings.                                                                                                                                                                                                | N/A                  |
+| [ft_memchr](ft_memchr.c)       | Scans the initial `n` bytes of the memory area for the first instance of `c`.                                                                                                                                        | N/A                  |
+| [ft_memcmp](ft_memcmp.c)       | Compare two memory areas, returning an integer less than, equal to, or greater than zero if the first n bytes of `s1` is found, respectively, to be less than, to match, or be greater than te first n bytes of `s2` | N/A                  |
+| [ft_strnstr](ft_strnstr.c)     | Locates the first occurrence of a null-terminated smaller string in a bigger string, where not more than `len` characters are searched.                                                                              | N/A                  |
+| [ft_atoi](ft_atoi.c)           | Converts the initial portion of a string to `int`                                                                                                                                                                    | N/A                  |
+| [ft_calloc](ft_calloc.c)       | Allocates memory for an array of `nmemb` elements of `size` bytes each. The memory is set to 0                                                                                                                       | `malloc()`           |
+| [ft_strdup](ft_strdup.c)       | Allocates and returns a new string which is a duplicate of the string `s`.                                                                                                                                           | `malloc()`           |
+| [ft_substr](ft_substr.c)       | Allocates and returns a substring from the string `s`.                                                                                                                                                               | `malloc()`           |
+| [ft_strjoin](ft_strjoin.c)     | Allocates and returns a new string, which is the result of the concatenation of `s1` and `s2`.                                                                                                                       | `malloc()`           |
+| [ft_strtrim](ft_strtrim.c)     | Allocates and returns a copy of `s1` with the characters specified in `set` removed from the beginning and the end of the string.                                                                                    | `malloc()`           |
+| [ft_split](ft_split.c)         | Allocates and returns an array of strings obtained by splitting `s` using the character `c` as delimiter. The string must end with a NULL pointer.                                                                   | `malloc()`, `free()` |
+| [ft_itoa](ft_itoa.c)           | Allocates and returns a string representing the integer received as an argument. Negative numbers must be handled.                                                                                                   | `malloc()`           |
+| [ft_strmapi](ft_strmapi)       | Applies the function `f` to each character of the string `s`, and passing its index as first argument to create a new string resulting from successive applications of `f`.                                          | `malloc()`           |
+| [ft_striteri](ft_striteri)     | Applies the function `f` on each character of the string passed as argument, passing its index as first argument. Each character is passed by address of `f` to be modified if necessary.                            | N/A                  |
+| [ft_putchar_fd](ft_putchar_fd) | Outputs a character to the given file descriptor.                                                                                                                                                                    | `write()`            |
+| [ft_putstr_fd](ft_putstr_fd)   | Outputs a string to the given file descriptor.                                                                                                                                                                       | `write()`            |
+| [ft_putendl_fd](ft_putendl_fd) | Outputs a string to the given file descriptor followed by a newline.                                                                                                                                                 | `write()`            |
+| [ft_putnbr_fd](ft_putnbr_fd)   | Outputs an integer to the given file descriptor                                                                                                                                                                      | `write()`            |
 
 
 ### How to Build
