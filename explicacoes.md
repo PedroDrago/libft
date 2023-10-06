@@ -28,3 +28,13 @@ ar -rc libft.a *.o
 ```
 
 Agora temos nossa biblioteca `libft.a` (aparentemente esse arquivo é usado na hora do `linking` na compilação, também não entendi 100% ainda);
+
+### Usando a biblioteca
+Aparentemente para usar uma biblioteca feita por nós mesmos precisamos ter acesso ao `archive` (`libft.a` neste caso) e ao `header` (`libft.h` neste caso). Com isso podemos ao compilar um programa que vá utilizar esta biblioteca usando as seguintes opções:
+```bash
+cc main.c -L./libft.a -l libft.a -I./libft.h
+```
+1. Definimos o arquivo que que será compilado e está usando a biblioteca: `main.c`
+2. Passamos o path para o `archive` da biblioteca usando a flag `-L`: `./libft.a`
+3. Passamos o nome da biblioteca usando a tag `-l`: `libft.a`
+4. Passamos o path para o `header` da biblioteca usando a tag `-I`: `./libft.h`
