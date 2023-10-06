@@ -35,7 +35,7 @@
 - Usar uma função da propria libft dentro de outra função da libft: em `ft_strdup` usei `ft_strlen`
 
 ### Part 2 - Adittional Functions
-- ft_substr
+- ~~ft_substr~~ (duvida a respeito de null-terminating byte)
 - ft_strjoin
 - ft_strtrim
 - ft_split
