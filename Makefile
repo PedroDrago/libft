@@ -8,8 +8,10 @@ all: ${NAME}
 
 ${NAME}: ${OBJS}
 	ar -rc ${NAME} ${OBJS}
+
 ${OBJS}: ${EXCLUDE}
 	cc ${FLAGS} $< -o $@
+
 clean:
 	rm -rf *.o
 
