@@ -5,7 +5,7 @@ This readme will act as a documentation for this libary
 
 | Function      | Description                                                       | External Functions |
 | ------------- | ----------------------------------------------------------------- | ------------------ |
-| ft_isalpha    | Check if a character is alphabetic                                | N/A|
+| [ft_isalpha](src/ft_isalpha.c))    | Check if a character is alphabetic                                | N/A|
 | ft_isdigit    | Check if a character is a digit                                   | N/A               |
 | ft_isalnum    | check if a character is alphanumeric                              | N/A                    |
 | ft_isascii    | check if c is in ASCII range                                      | N/A                    |
