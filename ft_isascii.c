@@ -6,12 +6,16 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 20:56:50 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/05 22:17:40 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/05 23:08:51 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+checks whether c is a 7-bit unsigned char value 
+that fits into the ASCII character set.
+*/
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)

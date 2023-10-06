@@ -6,11 +6,16 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 20:56:50 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/05 22:17:18 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/05 23:14:03 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+checks for an alphanumeric character, 
+it is equivalent to (ft_isalpha(c) || ft_isdigit(c)).
+*/
 
 int	ft_isalnum(int c)
 {

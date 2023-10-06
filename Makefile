@@ -1,6 +1,6 @@
 FLAGS = -Wall -Wextra -Werror -c
 CFILES = $(shell find . -name "*.c")
-EXCLUDE = $(subst ./tests.c,,${CFILES}) #remove tests.c from list of what must be compiled
+EXCLUDE = $(subst ./.tests.c,,${CFILES}) #remove tests.c from list of what must be compiled
 OBJS = ${EXCLUDE:.c=.o} 
 NAME = libft.a
 
