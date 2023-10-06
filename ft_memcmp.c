@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/05 21:24:56 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/05 21:28:50 by pdrago           ###   ########.fr       */
+/*   Created: 2023/10/05 21:20:17 by pdrago            #+#    #+#             */
+/*   Updated: 2023/10/05 22:16:03 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int	memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t		count;
-	char	*ptr;
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
+	int	count;
 
-	ptr = (char *) s;
-	count = -1;
-	while (*ptr && (++count < n))
+	ptr1 = (unsigned char *) s1;
+	ptr2 = (unsigned char *) s2;
+	count = 0;
+	if (n == 0)
+		return (0);
+	while (ptr1[count] && ptr2[count])
 	{
-		if (*ptr == c)
-			break;
-		ptr++;
+		if (ptr1[count] != ptr2[count])
+			return (ptr1[count] - ptr2[count]);
+		count++;
 	}
-	return (ptr);
+	return (ptr1[count] - ptr2[count]);
 }
+

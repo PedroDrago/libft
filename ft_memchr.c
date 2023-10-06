@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 20:56:50 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/05 18:59:34 by pdrago           ###   ########.fr       */
+/*   Created: 2023/10/05 21:24:56 by pdrago            #+#    #+#             */
+/*   Updated: 2023/10/05 22:16:43 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-int	ft_isalpha(int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	return (0);
+	size_t		count;
+	char	*ptr;
+
+	ptr = (char *) s;
+	count = -1;
+	while (*ptr && (++count < n))
+	{
+		if (*ptr == c)
+			break;
+		ptr++;
+	}
+	return (ptr);
 }

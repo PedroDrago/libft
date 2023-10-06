@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 21:42:31 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/05 18:59:03 by pdrago           ###   ########.fr       */
+/*   Created: 2023/10/05 17:45:41 by pdrago            #+#    #+#             */
+/*   Updated: 2023/10/05 22:15:30 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-int	ft_tolower(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	size_t	count;
+	char	*ptr;
+
+	ptr = (char *) s;
+	count = -1;
+	while (++count < n)
+		ptr[count] = 0;
 }

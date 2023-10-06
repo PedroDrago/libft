@@ -6,11 +6,11 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 21:22:22 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/05 18:58:07 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/05 22:15:20 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {

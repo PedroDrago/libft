@@ -6,10 +6,10 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 19:06:42 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/05 21:14:10 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/05 22:18:18 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "includes/libft.h"
+#include "libft.h"
 
 #include <stdlib.h>
 #include <string.h>
