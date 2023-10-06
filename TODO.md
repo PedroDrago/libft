@@ -48,6 +48,7 @@
 - Casting nas funções de Mem
 - Usar uma função da propria libft dentro de outra função da libft: em `ft_strdup` usei `ft_strlen`
 - Nas funções de escrever em um file descriptor especifico, é realmente só usar write com `fd` como variável?
+- Memory leak na `ft_split` está só na main?
 
 ### Bonus part
 - ft_lstnew
