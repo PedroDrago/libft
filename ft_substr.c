@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 00:02:21 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/06 00:10:05 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/06 00:46:19 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ maximum size ’len’.
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned int		count;
-	unsigned int		substr_len;
 	char				*substr;
 
 	count = 0;
