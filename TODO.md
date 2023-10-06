@@ -37,15 +37,15 @@
 ### Part 2 - Adittional Functions
 - ~~ft_substr~~ (duvida a respeito de null-terminating byte)
 - ft_strjoin
-- ft_strtrim
+- ~~ft_strtrim~~ (ta feio o codigo)
 - ft_split
 - ft_itoa
 - ft_strmapi
 - ft_striteri
-- ft_putchar_fd
-- ft_putstr_fd
-- ft_putendl_fd
-- ft_putnbr_fd
+- ~~ft_putchar_fd~~ (duvida sobre fd?)
+- ~~ft_putstr_fd~~ (duvida sobre fd?)
+- ~~ft_putendl_fd~~ (duvida sobre fd?)
+- ~~ft_putnbr_fd~~ (duvida sobre fd?)
 
 ### Bonus part
 - ft_lstnew
