@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:10:22 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/06 10:11:18 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/06 10:36:27 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ NUL-terminated source string to the end of a destine string.
 size_t	strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	len;
-
 
 	return (len);
 }

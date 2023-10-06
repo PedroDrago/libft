@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 02:34:14 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/06 02:47:15 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/06 10:37:16 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	fill_array(int n, char *number)
 	}
 	if (n > 9)
 	{
-		fill_array(n/10, number);
-		fill_array(n%10, number);
+		fill_array(n / 10, number);
+		fill_array(n % 10, number);
 	}
 	else
 	{
@@ -35,11 +35,12 @@ void	fill_array(int n, char *number)
 		number++;
 	}
 }
+
 char	*ft_itoa(int n)
 {
 	char	*number;
-	int	ncpy;
-	int	houses;
+	int		ncpy;
+	int		houses;
 
 	ncpy = n;
 	houses = 1;
@@ -52,6 +53,5 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		number[0] = '-';
 	fill_array(n, number);
-
 	return (number);
 }
