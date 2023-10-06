@@ -1,5 +1,5 @@
 # Libft
-This project goal is to write my own library in C, with some reproduction of libc, stdlib and other sources functions.
+This project goal is to write my own library in C, with some reproductions of libc, stdlib and other sources functions.
 
 This readme will act as a documentation for this libary
 
@@ -39,4 +39,7 @@ This readme will act as a documentation for this libary
 | [ft_putstr_fd](src/ft_putstr_fd) |                                                                   |                    |
 | [ft_putendl_fd](src/ft_putendl_fd) |                                                                   |                    |
 | [ft_putnbr_fd](src/ft_putnbr_fd)  |                                                                   |                    |
+
+
+### How to Build
 
