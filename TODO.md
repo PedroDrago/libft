@@ -20,7 +20,7 @@
 - strlcat
 - memmove
 - strnstr
-- realloc
+- ~~calloc~~ (se ft_bzero tiver certo, calloc ta certo tbm)
 
 **Not quite sure**
 - ~~memchr~~
@@ -29,16 +29,12 @@
 - ~~memcpy~~ 
 - ~~memcmp~~
 
-### Duvidas
-- a respeito do tipo `size_t` que existe em funcoes como `strlen`, `strncmp`, devemos implementar esse tipo no headerfile ou importar a lib que possua essa definição?
-- Casting nas funções de Mem
-- Usar uma função da propria libft dentro de outra função da libft: em `ft_strdup` usei `ft_strlen`
 
 ### Part 2 - Adittional Functions
 - ~~ft_substr~~ (duvida a respeito de null-terminating byte)
-- ft_strjoin
+- ~~ft_strjoin~~
 - ~~ft_strtrim~~ (ta feio o codigo)
-- ft_split
+- ~~ft_split~~ (Ta com memory leak eu acho, e ta feio pra caralho)
 - ft_itoa
 - ft_strmapi
 - ft_striteri
@@ -46,6 +42,12 @@
 - ~~ft_putstr_fd~~ (duvida sobre fd?)
 - ~~ft_putendl_fd~~ (duvida sobre fd?)
 - ~~ft_putnbr_fd~~ (duvida sobre fd?)
+
+### Duvidas
+- a respeito do tipo `size_t` que existe em funcoes como `strlen`, `strncmp`, devemos implementar esse tipo no headerfile ou importar a lib que possua essa definição?
+- Casting nas funções de Mem
+- Usar uma função da propria libft dentro de outra função da libft: em `ft_strdup` usei `ft_strlen`
+- Nas funções de escrever em um file descriptor especifico, é realmente só usar write com `fd` como variável?
 
 ### Bonus part
 - ft_lstnew
