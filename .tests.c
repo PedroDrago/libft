@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 19:06:42 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/05 22:18:18 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/06 09:33:14 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -98,7 +98,7 @@ int main(void)
 	printf("\n----------ft_memcpy Testing----------\n");
 	printf("\"The  memcpy()  function copies n bytes from memory area src to memory area dest.  The memory areas must not overlap.\"\n");
 
-	printf("\n----------ft_memove Testing----------\n");
+	printf("\n----------ft_memmove Testing----------\n");
 	printf("\"The  memmove() function copies n bytes from memory area src to memory area dest.  The memory areas may overlap: copying takes place as though the bytes in  src  are  first copied  into  a  temporary array that does not overlap src or dest, and the bytes are then copied from the temporary array to dest.\"\n");
 
 	printf("\n----------ft_strlcpy Testing----------\n");
@@ -253,5 +253,11 @@ int main(void)
 
 	printf("\n----------ft_strdup Testing----------\n");
 	printf("\"The  strdup()  function returns a pointer to a new string which is a duplicate of the string s.  Memory for the new string is obtained with malloc(3),  and  can  be  freed with free(3).\"\n");
+	char	*vazia_original;
+	char	*vazia_replica;
+	vazia_original = strdup("pedro-drago");
+	vazia_replica = ft_strdup("pedro-drago");
+	printf("Original (argumento = \"pedro-drago\"): %s\n", vazia_original);
+	printf("Replica (argumento = \"pedro-drago\"): %s\n", vazia_replica);
 	return 0;
 }
