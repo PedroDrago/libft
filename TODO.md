@@ -34,7 +34,7 @@
 - ~~ft_substr~~ (duvida a respeito de null-terminating byte)
 - ~~ft_strjoin~~
 - ~~ft_strtrim~~ (ta feio o codigo)
-- ft_itoa
+- ~~ft_itoa~~ (ta feio, talvez esteja faltando tratar algum erro)
 - ft_strmapi
 - ft_striteri
 
