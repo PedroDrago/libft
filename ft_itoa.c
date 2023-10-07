@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 02:34:14 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/06 23:39:56 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/07 02:13:14 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,35 @@ static int	count_digits(int n)
 	return (digits);
 }
 
+char	*allocate_string(int *n, int *digits)
+{
+	char	*str;
+
+	if ((*n) < 0)
+	{
+		str = (char *) malloc (sizeof(char) * ((*digits) + 2));
+		if (!str)
+			return (NULL);
+		str[0] = '-';
+		*n = -(*n);
+		(*digits)++;
+	}
+	else
+	{
+		str = (char *) malloc (sizeof(char) * ((*digits) + 1));
+		if (!str)
+			return (NULL);
+	}
+	return (str);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*str;
 	int		digits;
 
-	if (n == 0) //esse trecho me faz sair da norma, antes eu tive a ideia de so retornar string literal "0\0", mas acredito que a funcao
-	{	    //tenha que retornar uma string que de pra dar free.
+	if (n == 0)
+	{
 		str = (char *) malloc (sizeof(char) * 2);
 		if (!str)
 			return (NULL);
@@ -47,21 +69,7 @@ char	*ft_itoa(int n)
 		return (str);
 	}
 	digits = count_digits(n);
-	if (n < 0)
-	{
-		str = (char *) malloc (sizeof(char) * digits + 2);
-		if (!str)
-			return (NULL);
-		str[0] = '-';
-		n = -n;
-		digits++;
-	}
-	else
-	{
-		str = (char *) malloc (sizeof(char) * digits + 1);
-		if (!str)
-			return (NULL);
-	}
+	str = allocate_string(&n, &digits);
 	while (n != 0)
 	{
 		str[digits - 1] = (n % 10) + '0';
@@ -71,4 +79,3 @@ char	*ft_itoa(int n)
 	str[digits - 2] = '\0';
 	return (str);
 }
-
