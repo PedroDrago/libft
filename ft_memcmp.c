@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 21:20:17 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/05 23:12:25 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/12 08:49:49 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ that differ in s1 and s2.
 
 If n is zero, the return value is zero.
 */
+
 int	memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*ptr1;

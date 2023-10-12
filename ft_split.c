@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 01:58:34 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/06 02:33:01 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/12 09:17:04 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,23 +80,3 @@ char	**ft_split(char const *s, char c)
 	splited[count2] = NULL;
 	return (splited);
 }
-/*
-#include <stdio.h>
-int main(void)
-{
-	char	str[] = "pedro-pinheiro-drago";
-	char	**sp = ft_split(str, '-');
-	int	count;
-
-	count = 0;
-	while (sp[count])
-	{
-		printf("%s\n", sp[count]);
-		free(sp[count]);
-		count++;
-	}
-	free (sp);
-
-	return 0;
-}
-*/

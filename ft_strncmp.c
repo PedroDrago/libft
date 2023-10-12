@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 21:46:33 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/05 22:57:26 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/12 08:53:56 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ it compares only the first (at most) n bytes of s1 and s2.
        - a negative value if s1 is less than s2;
        - a positive value if s1 is greater than s2.
 */
+
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	count;
@@ -29,7 +30,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	count = 0;
 	if (n == 0)
 		return (0);
-	while ((s1[count] == s2[count]) && (s1[count]) && (s2[count]) && (--n))
+	while ((((unsigned char) s1[count]) == ((unsigned char) s2[count]))
+		&& (s1[count]) && (s2[count]) && (--n))
 		count++;
-	return (s1[count] - s2[count]);
+	return ((unsigned char) s1[count] - (unsigned char) s2[count]);
 }
