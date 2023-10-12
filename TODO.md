@@ -20,7 +20,7 @@
 
 # Bonus
 
-### to-do
+### done but not sure
 - ft_lstnew
 - ft_lstadd_front
 - ft_lstsize
@@ -29,4 +29,6 @@
 - ft_lstdelone
 - ft_lstclear
 - ft_lstiter
+
+### wrong
 - ft_lstmap
