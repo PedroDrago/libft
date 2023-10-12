@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:10:22 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/07 02:41:27 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/12 07:48:50 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return(dst_count);
 }
 
-
+/*
 int main(void)
 {
 	#include <bsd/string.h>
@@ -52,3 +52,4 @@ int main(void)
 	printf("%s\n", dest);
 	return EXIT_SUCCESS;
 }
+*/
