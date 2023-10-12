@@ -1,15 +1,18 @@
 FLAGS = -Wall -Wextra -Werror -c
 CFILES = $(shell find . -name "*.c")
-EXCLUDE = $(subst ./.tests.c,,${CFILES}) #remove tests.c from list of what must be compiled
-OBJS = ${EXCLUDE:.c=.o} 
+OBJS = ${CFILES:.c=.o} 
+
+MANDATORY_CFILES = $(filter-out ft_lst%, $(CFILES))
+MANDATORY_OBJS = ${MANDATORY_CFILES:.c=.o}
+
 NAME = libft.a
 
 all: ${NAME}
 
-${NAME}: ${OBJS}
-	ar -rc ${NAME} ${OBJS}
+${NAME}: ${MANDATORY_OBJS}
+	ar -rc ${NAME} ${MANDATORY_OBJS}
 
-${OBJS}: ${EXCLUDE}
+${MANDATORY_OBJS}: ${MANDATORY_CFILES}
 	cc ${FLAGS} $< -o $@
 
 clean:
@@ -19,3 +22,10 @@ fclean: clean
 	rm -rf ${NAME}
 
 re: clean fclean ${NAME}
+
+
+bonus: ${OBJS}
+	ar -rc ${NAME} ${MANDATORY_OBJS}
+
+${OBJS}: ${CFILES}
+	cc ${FLAGS} $< -o $@

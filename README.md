@@ -48,4 +48,7 @@ This project goal is to write my own C library , with some reproductions of libc
 | [ft_lstmap](ft_lstmap.c)             | Iterates the list `lst` and applies the function `f` on the content of each node. Creates a new list resulting of the successive applications of the function `f`. The `del` function is used to delete te content of a node if needed. | `malloc()` `free()` |
 
 ### How to Build
-
+To build base functions
+```bash
+make
+```
