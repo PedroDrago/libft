@@ -6,11 +6,12 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:17:00 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/12 10:23:35 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/12 13:03:45 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 /*
 The strnstr() function locates the first occurrence of the 
@@ -21,7 +22,7 @@ after a ‘\0’ character are not searched.
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int		count;
+	size_t	count;
 	char	*little_start;
 	size_t	little_len;
 
