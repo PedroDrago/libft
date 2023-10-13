@@ -35,3 +35,4 @@
 - Como fazer o makefile não dar aqueles warnings de recipe duplicada?
 - `lstmap`: quando dar `free`? quando usar `del()`? fora isso o que eu fiz deve ta errado.
 - back vs front em uma lista. Gravar melhor e conferir se é isso mesmo: front é o head da lista, onde sempre temos acesso ao item. Back é o tail da lista, para acessar temos que fazer um traversal pela lista.
+
