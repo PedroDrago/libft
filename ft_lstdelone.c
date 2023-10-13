@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:34:35 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/12 14:36:28 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/13 11:24:32 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ as a parameter and free the node. The memory of
 ’next’ must not be freed.
 */
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	del(lst->content);
 	free(lst);

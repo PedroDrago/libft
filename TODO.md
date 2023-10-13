@@ -31,8 +31,6 @@
 - ft_lstclear
 - ft_lstiter
 
-
-
 ### Duvidas
 - Como fazer o makefile não dar aqueles warnings de recipe duplicada?
 - `lstmap`: quando dar `free`? quando usar `del()`? fora isso o que eu fiz deve ta errado.

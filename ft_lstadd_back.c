@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:28:33 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/12 14:32:40 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/13 11:23:57 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 Adds the node ’new’ at the end of the list.
 */
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current;
 

@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:36:42 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/12 14:43:19 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/13 11:24:39 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Finally, the pointer to the list must be set to
 NULL.
 */
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*current;
 	t_list	*old;

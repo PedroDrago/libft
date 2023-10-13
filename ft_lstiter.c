@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:44:28 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/12 14:46:02 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/13 11:22:56 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Iterates the list ’lst’ and applies the function
 ’f’ on the content of each node.
 */
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*current;
 

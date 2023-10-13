@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:24:21 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/12 14:25:58 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/13 11:24:25 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 Counts the number of nodes in a list.
 */
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int	count;
+	int		count;
 	t_list	*current;
 
 	count = 0;
