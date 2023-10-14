@@ -1,31 +1,24 @@
 FLAGS = -Wall -Wextra -Werror -c
-CFILES = $(shell find . -name "*.c")
-OBJS = ${CFILES:.c=.o} 
+NAME = libft.a 
+SRC = $(wildcard *.c)
+BONUS_OBJ = $(SRC:.c=.o)
+OBJ = $(filter-out ft_lst%, $(SRC:.c=.o))
 
-MANDATORY_CFILES = $(filter-out ft_lst%, $(CFILES))
-MANDATORY_OBJS = ${MANDATORY_CFILES:.c=.o}
+all: $(NAME)
 
-NAME = libft.a
+$(NAME): $(OBJ)
+	 ar -rc $(NAME) $(OBJ)
 
-all: ${NAME}
+bonus: $(BONUS_OBJ)
+	 ar -rc $(NAME) $(BONUS_OBJ)
 
-${NAME}: ${MANDATORY_OBJS}
-	ar -rc ${NAME} ${MANDATORY_OBJS}
-
-${MANDATORY_OBJS}: ${MANDATORY_CFILES}
-	cc ${FLAGS} $< -o $@
+%.o: %.c
+	cc $(FLAGS) $< -o $@
 
 clean:
-	rm -rf *.o
+	rm -f $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
-	rm -rf ${NAME}
+	rm -f $(NAME)
 
-re: clean fclean ${NAME}
-
-
-bonus: ${OBJS}
-	ar -rc ${NAME} ${MANDATORY_OBJS}
-
-${OBJS}: ${CFILES}
-	cc ${FLAGS} $< -o $@
+re: fclean all
