@@ -1,6 +1,6 @@
 # Mandatory
 ### to-do
-- ft_memmove: memmove supostamente deve copiar os bytes de `src` para um buffer temporário, e depois copiar do buffer temporário para `dest`. Como eu deveria criar esse buffer temporário sem saber previamente o tamanho de `src` e sem poder usar `malloc`?
+- ft_memmove: memmove supostamente deve copiar os bytes de `src` para um buffer temporário, e depois copiar do buffer temporário para `dest`. Como eu deveria criar esse buffer temporário sem saber previamente o tamanho de `src` e sem poder usar `malloc`? Outra duvida, o que exatamente é overlap? Qual a diferença na utilidade de `memcpy` e `memmove`?
 
 ### done but not sure
 - ft_strmapi
