@@ -6,11 +6,12 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 01:58:34 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/12 09:17:04 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/17 19:41:16 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 /*
 Allocates (with malloc(3)) and returns an array
@@ -37,46 +38,60 @@ static int	split_count(char const *s, char c)
 
 static char	*ft_new_str_dup(char const *s, int start, int end)
 {
-	int		len;
-	int		count;
-	char	*str;
+	char	*new_str;
+	int	count;
 
-	len = end - start;
-	str = (char *) malloc (sizeof(char) * (len + 1));
-	if (!str)
+	new_str = (char *) malloc (sizeof(char) * end - start + 1);
+	if (!new_str)
 		return (NULL);
 	count = 0;
 	while (start < end)
-		str[count++] = s[start++];
-	str[count] = '\0';
-	return (str);
+	{
+		new_str[count] = s[start];
+		count++;
+		start++;
+	}
+	new_str[count] = '\0';
+	return (new_str);
+}
+
+char	**split_split(char *s, char c, char **sp)
+{
+	int	count;
+	int	count2;
+	int	start;
+	int	end;
+	
+	start = 0;
+	end = -1;
+	count2 = 0;
+	count = 0;
+	while (s[count])
+	{
+		if (s[count - 1] == c && s[count] != c)
+			start = count;
+		else if ((s[count + 1] == c && s[count] != c) || (s[count + 1] == '\0'))
+			end = count + 1;
+		if (start >= 0 && end >= 0)
+		{
+			sp[count2] = ft_new_str_dup(s, start, end);
+			count2++;
+			start = -1;
+			end = -1;
+		}
+		count++;
+	}
+	sp[count2] = NULL;
+	return (sp);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		start;
-	int		end;
-	int		count;
-	int		count2;
-	char	**splited;
+	char	**splitted;
 
-	splited = (char **) malloc (sizeof(char *) * (split_count(s, c) + 1));
-	if (!splited)
+	splitted = (char **) malloc (sizeof(char *) * (split_count(s, c) + 1));
+	if (!splitted)
 		return (NULL);
-	count2 = 0;
-	start = 0;
-	while (1)
-	{
-		if (s[count] == c || s[count] == '\0')
-		{
-			end = count;
-			splited[count2++] = ft_new_str_dup(s, start, end);
-			start = count + 1;
-		}
-		if (s[count++] == '\0')
-			break ;
-	}
-	count2++;
-	splited[count2] = NULL;
-	return (splited);
+	return (split_split(ft_strtrim(s, &c), c, splitted));
 }
+

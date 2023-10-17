@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:08:47 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/12 09:15:12 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/17 16:31:37 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,22 @@ string to a destine string, NUL-terminating the result.
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t	count;
+	char		*end;
+	const char	*start;
 
-	count = 0;
-	while (src[count] && count < size)
+	end = dst + size;
+	start = src;
+	while (*start != '\0' && dst < end)
 	{
-		dst[count] = src[count];
-		count++;
+		*dst = *start;
+		dst++;
+		start++;
 	}
-	if (size > 0)
-		dst[count] = '\0';
-	return (count);
+	if (dst < end)
+		*dst = 0;
+	else if (size > 0)
+		dst[-1] = 0;
+	while (*start != '\0')
+		start++;
+	return (start - src);
 }

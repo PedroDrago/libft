@@ -6,11 +6,12 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 21:20:17 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/12 08:49:49 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/17 12:18:14 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 /*
 The  ft_memcmp() function returns an integer less than, equal 
@@ -25,22 +26,20 @@ that differ in s1 and s2.
 If n is zero, the return value is zero.
 */
 
-int	memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char	*ptr1;
-	unsigned char	*ptr2;
-	int				count;
+	char	*ptr1;
+	char	*ptr2;
+	size_t	count;
 
-	ptr1 = (unsigned char *) s1;
-	ptr2 = (unsigned char *) s2;
 	count = 0;
-	if (n == 0)
-		return (0);
-	while (ptr1[count] && ptr2[count])
+	ptr1 = (char *)s1;
+	ptr2 = (char *)s2;
+	while (count < n)
 	{
 		if (ptr1[count] != ptr2[count])
-			return (ptr1[count] - ptr2[count]);
+			return ((unsigned char)ptr1[count] - (unsigned char)ptr2[count]);
 		count++;
 	}
-	return (ptr1[count] - ptr2[count]);
+	return (0);
 }

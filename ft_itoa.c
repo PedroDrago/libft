@@ -6,11 +6,12 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 02:34:14 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/12 13:34:05 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/17 19:47:49 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 /*
 Allocates (with malloc(3)) and returns a string
@@ -18,85 +19,48 @@ representing the integer received as an argument.
 Negative numbers must be handled.
 */
 
-static int	count_digits(int n)
+static unsigned int	count_len(int number)
 {
-	int	digits;
+	unsigned int	length;
 
-	digits = 0;
-	while (n != 0)
+	length = 0;
+	if (number == 0)
+		return (1);
+	if (number < 0)
+		length += 1;
+	while (number != 0)
 	{
-		n /= 10;
-		++digits;
+		number /= 10;
+		length++;
 	}
-	return (digits);
-}
-
-static char	*allocate_string(int *n, int *digits)
-{
-	char	*str;
-
-	if ((*n) < 0)
-	{
-		str = (char *) malloc (sizeof(char) * ((*digits) + 2));
-		if (!str)
-			return (NULL);
-		str[0] = '-';
-		*n = -(*n);
-		(*digits)++;
-	}
-	else
-	{
-		str = (char *) malloc (sizeof(char) * ((*digits) + 1));
-		if (!str)
-			return (NULL);
-	}
-	return (str);
-}
-
-char	*deal_with_int_min(void)
-{
-	char	*str;
-	char	*minint;
-	int		count;
-
-	str = (char *) malloc (sizeof(char) * 11 + 1);
-	if (!str)
-		return (NULL);
-	minint = "-2147483648";
-	count = 0;
-	while (minint[count])
-	{
-		str[count] = minint[count];
-		count++;
-	}
-	str[count] = '\0';
-	return (str);
+	return (length);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	int		digits;
+	char			*str;
+	unsigned int	number;
+	unsigned int	len;
 
-	if (n == -2147483648)
-		return (deal_with_int_min());
+	len = count_len(n);
+	str = (char *) malloc (sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
 	if (n == 0)
-	{
-		str = (char *) malloc (sizeof(char) * 2);
-		if (!str)
-			return (NULL);
 		str[0] = '0';
-		str[1] = '\0';
-		return (str);
-	}
-	digits = count_digits(n);
-	str = allocate_string(&n, &digits);
-	while (n != 0)
+	if (n < 0)
 	{
-		str[digits - 1] = (n % 10) + '0';
-		digits--;
-		n = n / 10;
+		str[0] = '-';
+		number = -n;
 	}
-	str[digits - 2] = '\0';
+	else
+		number = n;
+	str[len] = '\0';
+	while (number != 0)
+	{
+		str[len - 1] = (number % 10) + '0';
+		number = number / 10;
+		len--;
+	}
 	return (str);
 }

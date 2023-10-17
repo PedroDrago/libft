@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 00:02:21 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/06 00:46:19 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/17 12:25:30 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,13 @@ The substring begins at index ’start’ and is of
 maximum size ’len’.
 */
 
-/*DUVIDA: a função não especifica se a substring deve ser NULL terminated*/
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned int		count;
 	char				*substr;
 
 	count = 0;
-	substr = (char *) malloc (sizeof(char) * len);
+	substr = (char *) malloc (sizeof(char) * len + 1);
 	if (!substr)
 		return (NULL);
 	while (start < len)

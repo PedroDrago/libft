@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:28:33 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/13 11:23:57 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/17 13:16:14 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*current;
 
-	current = *lst;
-	while (current->next)
-		current = current->next;
-	current->next = new;
+	if (!(*lst))
+		*lst = new;
+	else
+	{
+		current = *lst;
+		while (current->next)
+			current = current->next;
+		current->next = new;
+	}
 }

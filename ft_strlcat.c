@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:10:22 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/12 08:33:31 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/17 12:08:09 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,19 @@ NUL-terminated source string to the end of a destine string.
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dst_count;
-	size_t	src_count;
+	size_t	count;
+	size_t	count2;
 
-	src_count = 0;
-	dst_count = 0;
-	if (size == 0)
-		return (0);
-	while (dst[dst_count])
-		dst_count++;
-	while (src[src_count] && src_count < size)
-		dst[dst_count++] = src[src_count++];
-	if (src_count < size)
-		dst[dst_count] = '\0';
-	return (dst_count);
+	count = 0;
+	count2 = 0;
+	while (dst[count] && count < size)
+		count++;
+	while (src[count2] && (count + count2 + 1) < size)
+	{
+		dst[count + count2] = src[count2];
+		count2++;
+	}
+	if (count < size)
+		dst[count + count2] = '\0';
+	return (count + ft_strlen(src));
 }

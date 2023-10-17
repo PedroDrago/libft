@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 11:18:24 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/12 13:35:33 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/17 12:53:21 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	count;
 
 	count = 0;
-	map = (char *) malloc (sizeof(char) * ft_strlen(s));
-	while (*s)
-		*map++ = f(count++, *s++);
-	return (&map[0]);
+	map = (char *) malloc (sizeof(char) * (ft_strlen(s) + 1));
+	if (!map)
+		return (NULL);
+	while (s[count])
+	{
+		map[count] = f(count, s[count]);
+		count++;
+	}
+	map[count] = '\0';
+	return (map);
 }

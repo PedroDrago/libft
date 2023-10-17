@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:36:42 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/13 11:24:39 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/17 13:26:55 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@ NULL.
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*current;
-	t_list	*old;
+	t_list	*tmp;
 
 	current = *lst;
 	while (current)
 	{
+		tmp = current->next;
 		del(current->content);
-		old = current;
-		current = current->next;
-		free(old);
+		free(current);
+		current = tmp;
 	}
-	lst = NULL;
+	*lst = NULL;
 }

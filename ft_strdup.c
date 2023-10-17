@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 18:38:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/05 23:17:20 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/17 12:10:16 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,17 @@ char	*ft_strdup(const char *s)
 	char	*ret;
 	int		count;
 
-	ret = (char *) malloc (sizeof(char) * ft_strlen(s));
+	if (!s)
+		return (NULL);
+	ret = (char *) malloc (sizeof(char) * ft_strlen(s) + 1);
+	if (!ret)
+		return (NULL);
 	count = 0;
 	while (s[count])
 	{
 		ret[count] = s[count];
 		count++;
 	}
+	ret[count] = '\0';
 	return (ret);
 }
