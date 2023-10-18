@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 00:02:21 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/17 12:25:30 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/17 21:11:36 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,22 @@ maximum size ’len’.
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int		count;
-	char				*substr;
+	size_t	count;
+	size_t	count2;
+	char	*substr;
 
-	count = 0;
-	substr = (char *) malloc (sizeof(char) * len + 1);
+	substr = (char *)malloc(sizeof(*s) * (len + 1));
 	if (!substr)
 		return (NULL);
-	while (start < len)
-		substr[count++] = s[start++];
-	substr[count] = '\0';
+	count = 0;
+	count2 = 0;
+	count = start;
+	while (s[count] && count2 < len)
+	{
+		substr[count2] = s[count];
+		count2++;
+		count++;
+	}
+	substr[count2] = 0;
 	return (substr);
 }

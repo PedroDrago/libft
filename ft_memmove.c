@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 08:39:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/17 14:51:05 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/17 21:10:57 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,28 @@ memory area. The areas may overlap.
 */
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*dst_cpy;
-	const char	*src_cpy;
+	int		count;
+	char	*srcpy;
+	char	*destcpy;
 
-	dst_cpy = (char *) dest;
-	src_cpy = (const char *) src;
+	srcpy = (char *) src;
+	destcpy = (char *) dest;
 	if (!dest || !src)
 		return (NULL);
-	if (dest < src)
-		return (ft_memcpy(dest, src, n));
-	while (--n)
-		dst_cpy[n] = src_cpy[n];
+	if (dest > src)
+	{
+		count = n - 1;
+		while (count >= 0)
+		{
+			destcpy[count] = srcpy[count];
+			count--;
+		}
+	}
+	else
+	{
+		count = -1;
+		while (++count < (int) n)
+			destcpy[count] = srcpy[count];
+	}
 	return (dest);
 }
