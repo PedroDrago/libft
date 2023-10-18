@@ -6,7 +6,7 @@
 #    By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 19:50:18 by pdrago            #+#    #+#              #
-#    Updated: 2023/10/18 14:46:08 by pdrago           ###   ########.fr        #
+#    Updated: 2023/10/18 14:54:52 by pdrago           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,9 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	 ar -rc $(NAME) $(OBJ)
+so:
+	cc -nostartfiles -fPIC $(FLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(BONUS_OBJ)
 
 bonus: $(BONUS_OBJ)
 	 ar -rc $(NAME) $(BONUS_OBJ)
