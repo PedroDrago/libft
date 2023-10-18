@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 18:38:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/17 12:10:16 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 15:29:39 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ char	*ft_strdup(const char *s)
 	char	*ret;
 	int		count;
 
-	if (!s)
-		return (NULL);
 	ret = (char *) malloc (sizeof(char) * ft_strlen(s) + 1);
 	if (!ret)
 		return (NULL);

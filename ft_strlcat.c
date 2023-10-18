@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:10:22 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/17 23:54:21 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 15:39:04 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	count = 0;
 	count2 = 0;
+	if (size < ft_strlen(dst))
+		return (ft_strlen(src) + size);
 	while (dst[count] && count < size)
 		count++;
 	while (src[count2] && (count + count2 + 1) < size)

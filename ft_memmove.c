@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 08:39:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/18 12:46:35 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 15:54:52 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	srcpy = (char *) src;
 	destcpy = (char *) dest;
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
 	if (dest > src)
 	{
