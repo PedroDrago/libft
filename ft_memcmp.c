@@ -6,12 +6,11 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 21:20:17 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/17 12:18:14 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 00:13:40 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 /*
 The  ft_memcmp() function returns an integer less than, equal 

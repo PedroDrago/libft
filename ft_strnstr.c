@@ -6,12 +6,11 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:17:00 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/12 13:03:45 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 00:13:27 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 /*
 The strnstr() function locates the first occurrence of the 

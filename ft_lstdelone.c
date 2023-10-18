@@ -6,12 +6,11 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:34:35 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/13 11:24:32 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 00:13:49 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 /*
 Takes as a parameter a node and frees the memory of

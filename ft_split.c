@@ -6,12 +6,11 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 01:58:34 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/17 21:10:01 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 00:13:33 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 /*
 Allocates (with malloc(3)) and returns an array

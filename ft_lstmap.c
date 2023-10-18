@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:46:24 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/17 21:29:31 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 00:21:09 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ delete the content of a node if needed.
 */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-t_list	*first;
+	t_list	*first;
 	t_list	*new;
 
 	if (!f || !del)
@@ -29,7 +29,8 @@ t_list	*first;
 	first = NULL;
 	while (lst)
 	{
-		if (!(new = ft_lstnew((*f)(lst->content))))
+		new = ft_lstnew((*f)(lst->content));
+		if (!(new))
 		{
 			while (first)
 			{
@@ -44,4 +45,5 @@ t_list	*first;
 		ft_lstadd_back(&first, new);
 		lst = lst->next;
 	}
-	return (first);}
+	return (first);
+}
