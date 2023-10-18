@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 00:02:21 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/17 21:11:36 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 14:35:10 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	count2;
 	char	*substr;
 
+	if (start >= ft_strlen(s))
+	{
+		substr = (char *) malloc (1);
+		substr[0] = 0;
+		return (substr);
+	}
 	substr = (char *)malloc(sizeof(*s) * (len + 1));
 	if (!substr)
 		return (NULL);

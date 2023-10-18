@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 01:58:34 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/18 00:13:33 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 13:39:50 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static char	*ft_new_str_dup(char const *s, int start, int end)
 	return (new_str);
 }
 
-char	**split_split(char *s, char c, char **sp)
+static char	**split_split(char *s, char c, char **sp)
 {
 	int	c1;
 	int	count2;
@@ -69,7 +69,7 @@ char	**split_split(char *s, char c, char **sp)
 	{
 		if (s[c1 - 1] == c && s[c1] != c)
 			start = c1;
-		else if ((s[c1 + 1] == c && s[c1] != c) || (s[c1 + 1] == '\0'))
+		if ((s[c1 + 1] == c && s[c1] != c) || (s[c1 + 1] == '\0'))
 			end = c1 + 1;
 		if (start >= 0 && end >= 0)
 		{

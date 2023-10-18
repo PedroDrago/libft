@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 00:49:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/18 00:10:27 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 13:44:24 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		ret = (char *)malloc(sizeof(char) * (end - start + 1));
 		if (!ret)
 			return (NULL);
-		ft_strlcpy(ret, &s1[start], end - start + 1);
+		ft_strlcpy(ret, &s1[start], (end - start + 1));
 	}
 	return (ret);
 }

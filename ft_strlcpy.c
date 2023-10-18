@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:08:47 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/17 16:31:37 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 14:15:34 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[-1] = 0;
 	while (*start != '\0')
 		start++;
-	return (start - src);
+	return (ft_strlen(src));
 }

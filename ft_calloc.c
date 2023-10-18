@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 03:27:11 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/06 03:36:21 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 14:41:41 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*allocation;
 
 	if (nmemb == 0 || size == 0)
-		return (NULL);
+	{
+		allocation = malloc (1);
+		return (allocation);
+	}
 	allocation = malloc (nmemb * size);
 	if (!allocation)
 		return (NULL);

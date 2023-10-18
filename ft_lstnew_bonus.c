@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:00:58 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/13 11:23:38 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 14:11:49 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ t_list	*ft_lstnew(void *content)
 	t_list	*node;
 
 	node = (t_list *) malloc (sizeof(content) + sizeof (t_list *));
+	if (!node)
+		return (NULL);
 	node->content = content;
 	node->next = NULL;
 	return (node);
