@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:17:00 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/18 00:13:27 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 23:35:20 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	count = 0;
 	little_len = ft_strlen(little);
-	if (!(*little))
+	if (!*little)
 		return ((char *) big);
 	while (*big && len--)
 	{
