@@ -6,16 +6,15 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 21:57:14 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/05 23:19:45 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 23:20:22 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*
 The ft_strrchr() function returns a pointer to the last 
 occurrence of the character c in the string s.
 */
+
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*ptrc;

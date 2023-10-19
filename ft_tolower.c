@@ -6,11 +6,9 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 21:42:31 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/18 12:58:00 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 23:20:41 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*
 If c is an uppercase letter, ft_tolower() returns its lowercase equivalent.
