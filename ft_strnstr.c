@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:17:00 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/19 14:46:26 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/23 10:33:24 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,40 +19,26 @@ more than len characters are searched.  Characters that appear
 after a ‘\0’ character are not searched.
 */
 
-static char	*ft_search(const char *big, const char *little,
-	size_t len, size_t little_len)
-{
-	size_t	count;
-	char	*little_start;
-
-	count = 0;
-	while (*big && len--)
-	{
-		if (*big == little[count])
-		{
-			if (count++ == 0)
-				little_start = (char *) big;
-			if (count == little_len)
-				return (little_start);
-		}
-		else
-		{
-			count = 0;
-			little_start = 0;
-		}
-		big++;
-	}
-	return (NULL);
-}
-
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	little_len;
+	size_t	h;
+	size_t	n;
 
-	if (!*little)
-		return ((char *) big);
-	little_len = ft_strlen(little);
-	if (len == 0)
-		return (NULL);
-	return (ft_search(big, little, len, little_len));
+	h = 0;
+	if (little[0] == '\0')
+		return ((char *)big);
+	while (big[h] != '\0')
+	{
+		n = 0;
+		while (big[h + n] == little[n] && (h + n) < len)
+		{
+			if (big[h + n] == '\0' && little[n] == '\0')
+				return ((char *)&big[h]);
+			n++;
+		}
+		if (little[n] == '\0')
+			return ((char *)big + h);
+		h++;
+	}
+	return (0);
 }

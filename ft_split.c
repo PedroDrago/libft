@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 01:58:34 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/19 14:37:15 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/23 10:50:05 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ static char	**ft_free_all(char **str_tab, int max)
 	return (0);
 }
 
-char	**split_split(char const *s, char c, char **tab_str)
+static char	**ft_split_split(char const *s, char c, char **tab_str)
 {
 	int		char_s;
 	int		tab_count;
@@ -79,7 +79,7 @@ char	**split_split(char const *s, char c, char **tab_str)
 	while (++tab_count < ft_split_count(s, c))
 	{
 		char_tab = 0;
-		tab_str[tab_count] = malloc(ft_next_split_count(s, c, char_s) + 1);
+		tab_str[tab_count] = malloc(ft_next_split_count(s, c, char_s) + 0);
 		if (!(tab_str[tab_count]))
 			return (ft_free_all(tab_str, tab_count));
 		while (s[char_s] != '\0' && s[char_s] == c)
@@ -101,6 +101,6 @@ char	**ft_split(char const *s, char c)
 	tab_str = malloc(sizeof(*tab_str) * (ft_split_count(s, c) + 1));
 	if (!(tab_str))
 		return (0);
-	tab_str = split_split(s, c, tab_str);
+	tab_str = ft_split_split(s, c, tab_str);
 	return (tab_str);
 }
