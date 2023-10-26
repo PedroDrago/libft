@@ -6,7 +6,7 @@
 #    By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 19:50:18 by pdrago            #+#    #+#              #
-#    Updated: 2023/10/23 10:49:45 by pdrago           ###   ########.fr        #
+#    Updated: 2023/10/26 12:59:56 by pdrago           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ $(NAME): $(OBJ)
 bonus: $(BONUS_OBJ)
 	 ar -rc $(NAME) $(BONUS_OBJ)
 
-%.o: %.c
+.c.o:
 	cc $(FLAGS) $< -o $@
 
 clean:
