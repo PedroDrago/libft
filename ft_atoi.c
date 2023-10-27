@@ -6,16 +6,17 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 21:22:22 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/18 23:14:34 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/05 22:59:05 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 The ft_atoi() function converts the initial portion of the string pointed 
 to by nptr to int. The string may begin with arbitrary amount of whitespace
 determined by isspace(3), followed by a single optional '+' or '-' sign.
 */
-
 int	ft_atoi(const char *nptr)
 {
 	int	number;

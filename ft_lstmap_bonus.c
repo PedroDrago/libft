@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:46:24 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/18 23:27:58 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 15:06:57 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (!f || !del)
 		return (NULL);
-	first = NULL;
 	while (lst)
 	{
 		new = ft_lstnew(f(lst->content));
@@ -36,12 +35,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			while (first)
 			{
 				new = first->next;
-				del(first->content);
+				del(first);
 				free(first);
 				first = new;
 			}
-			lst = NULL;
-			return (NULL);
 		}
 		ft_lstadd_back(&first, new);
 		lst = lst->next;

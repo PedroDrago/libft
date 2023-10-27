@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 02:34:14 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/23 10:51:35 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/18 00:16:03 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ representing the integer received as an argument.
 Negative numbers must be handled.
 */
 
-static unsigned int	ft_count_len(int number)
+static unsigned int	count_len(int number)
 {
 	unsigned int	length;
 
@@ -41,7 +41,7 @@ char	*ft_itoa(int n)
 	unsigned int	number;
 	unsigned int	len;
 
-	len = ft_count_len(n);
+	len = count_len(n);
 	str = (char *) malloc (sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
