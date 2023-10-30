@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:17:00 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/23 10:33:24 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/10/30 04:44:38 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,24 +21,26 @@ after a ‘\0’ character are not searched.
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	h;
-	size_t	n;
+	size_t	big_count;
+	size_t	little_count;
 
-	h = 0;
-	if (little[0] == '\0')
+	if (!ft_strlen(little) || big == little)
 		return ((char *)big);
-	while (big[h] != '\0')
+	big_count = 0;
+	little_count = 0;
+	while (big[big_count] && big_count < len)
 	{
-		n = 0;
-		while (big[h + n] == little[n] && (h + n) < len)
+		if (big[big_count] == little[0])
 		{
-			if (big[h + n] == '\0' && little[n] == '\0')
-				return ((char *)&big[h]);
-			n++;
+			while (big[big_count + little_count]
+				&& (little[little_count] == big[big_count + little_count])
+				&& (big_count + little_count < len))
+				little_count++;
+			if (little[little_count] == '\0')
+				return ((char *)&big[big_count]);
+			little_count = 0;
 		}
-		if (little[n] == '\0')
-			return ((char *)big + h);
-		h++;
+		big_count++;
 	}
 	return (0);
 }
