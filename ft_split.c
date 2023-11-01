@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 01:58:34 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/26 13:03:25 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/11/01 12:39:20 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ static char	**ft_split_split(char const *s, char c, char **tab_str)
 	while (++tab_count < ft_split_count(s, c))
 	{
 		char_tab = 0;
-		tab_str[tab_count] = malloc(sizeof(char)
+		tab_str[tab_count] = (char *) malloc(sizeof(char)
 				* ft_next_split_count(s, c, char_s) + 1);
 		if (!(tab_str[tab_count]))
 			return (ft_free_all(tab_str, tab_count));
@@ -99,7 +99,7 @@ char	**ft_split(char const *s, char c)
 
 	if (s == 0)
 		return (0);
-	tab_str = malloc(sizeof(*tab_str) * (ft_split_count(s, c) + 1));
+	tab_str = (char **) malloc(sizeof(*tab_str) * (ft_split_count(s, c) + 1));
 	if (!(tab_str))
 		return (0);
 	tab_str = ft_split_split(s, c, tab_str);
