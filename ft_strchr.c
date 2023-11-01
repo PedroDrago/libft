@@ -6,11 +6,9 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 21:57:14 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/05 23:14:44 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/11/01 12:22:50 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*
 The ft_strchr() function returns a pointer to the 

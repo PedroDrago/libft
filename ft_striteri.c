@@ -6,11 +6,9 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 11:12:03 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/13 23:19:15 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/11/01 12:23:07 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*
 Applies the function ’f’ on each character of

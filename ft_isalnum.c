@@ -6,11 +6,9 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 20:56:50 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/12 07:49:51 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/11/01 12:20:55 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 /*
 checks for an alphanumeric character, 
