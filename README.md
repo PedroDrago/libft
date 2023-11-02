@@ -47,8 +47,7 @@ This project goal is to write my own C library , with some reproductions of libc
 | [ft_lstiter](ft_lstiter_bonus.c)           | Iterates the list `lst` and applies the function `f` on the content of each node.                                                                                                                                                       | None                |
 | [ft_lstmap](ft_lstmap_bonus.c)             | Iterates the list `lst` and applies the function `f` on the content of each node. Creates a new list resulting of the successive applications of the function `f`. The `del` function is used to delete te content of a node if needed. | `malloc()` `free()` |
 
-### Set up
-Command to set libft to use for a 42 projetc:
+### Set up for use
 ```bash
 git clone git@github.com:PedroDrago/libft.git libft && rm -rf libft/README.md libft/.gitignore libft/.git
 ```
