@@ -47,17 +47,7 @@ This project goal is to write my own C library , with some reproductions of libc
 | [ft_lstiter](ft_lstiter_bonus.c)           | Iterates the list `lst` and applies the function `f` on the content of each node.                                                                                                                                                       | None                |
 | [ft_lstmap](ft_lstmap_bonus.c)             | Iterates the list `lst` and applies the function `f` on the content of each node. Creates a new list resulting of the successive applications of the function `f`. The `del` function is used to delete te content of a node if needed. | `malloc()` `free()` |
 
-### How to Build
-To build base functions
-```bash
-make
-```
-To build bonus functions:
-```bash
-make bonus
-```
-This will generate the libft Archive, which can be used in addition to the libft header file to utilize any of the lib functions.
-
+### Set up
 Command to set libft to use for a 42 projetc:
 ```bash
 git clone git@github.com:PedroDrago/libft.git libft && rm -rf libft/README.md libft/.gitignore libft/.git
