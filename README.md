@@ -57,3 +57,9 @@ To build bonus functions:
 make bonus
 ```
 This will generate the libft Archive, which can be used in addition to the libft header file to utilize any of the lib functions.
+
+Command to set libft to use for a 42 projetc:
+```bash
+git clone git@github.com:PedroDrago/libft.git libft
+rm -rf libft/README.md libft/.gitignore libft/.git
+```
