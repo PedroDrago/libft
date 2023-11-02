@@ -60,6 +60,5 @@ This will generate the libft Archive, which can be used in addition to the libft
 
 Command to set libft to use for a 42 projetc:
 ```bash
-git clone git@github.com:PedroDrago/libft.git libft
-rm -rf libft/README.md libft/.gitignore libft/.git
+git clone git@github.com:PedroDrago/libft.git libft && rm -rf libft/README.md libft/.gitignore libft/.git
 ```
