@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/18 16:06:02 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/11/06 11:37:17 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+# ifndef INT_MIN
+#  define INT_MIN -2147483648
+# endif 
+
+# ifndef INT_MAX
+#  define INT_MAX 2147483647
+# endif 
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);
