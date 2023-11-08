@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/11/06 11:37:17 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/11/08 18:09:09 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,18 @@
 # ifndef INT_MAX
 #  define INT_MAX 2147483647
 # endif 
+
+# ifndef UINT_MAX
+#  define UINT_MAX 4294967295
+# endif
+
+# ifndef LONG_MAX
+#  define LONG_MAX 9223372036854775807
+# endif
+
+# ifndef LONG_MIN
+#  define LONG_MIN -9223372036854775808
+# endif
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);
