@@ -6,7 +6,7 @@
 #    By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 19:50:18 by pdrago            #+#    #+#              #
-#    Updated: 2023/11/16 23:08:39 by pdrago           ###   ########.fr        #
+#    Updated: 2023/11/16 23:17:58 by pdrago           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,7 @@ gnl: $(OBJ) $(GNL_OBJ)
 	cc $(FLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ) $(BONUS_OBJ) $(PRINTF_OBJ) $(GNL_OBJ)
+	rm -f $(OBJ) $(BONUS_OBJ) $(PRINTF_OBJ) $(GNL_OBJ) a.out
 
 fclean: clean
 	rm -f $(NAME)
