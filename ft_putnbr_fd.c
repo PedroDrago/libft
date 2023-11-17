@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 00:41:01 by pdrago            #+#    #+#             */
-/*   Updated: 2023/11/08 18:11:51 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/11/16 23:12:41 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ descriptor
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long nb;
+	long	nb;
 
-	nb = n;
+	nb = (long) n;
 	if (nb < 0)
 	{
 		ft_putchar_fd('-', fd);
