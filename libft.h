@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/11/21 05:16:24 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/11/23 16:54:57 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,14 @@
 #  define LONG_MIN -9223372036854775808
 # endif
 
+# ifndef TRUE
+#  define TRUE 1
+# endif
+
+# ifndef FALSE
+#  define FALSE 0
+# endif
+
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_isprint(int c);
@@ -55,9 +63,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
-char	*ft_strjoinfree(char *s1, char *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoinfree(char *s1, char *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
