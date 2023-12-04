@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/11/30 01:18:19 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/04 16:10:53 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_strupper(char *str);
 void	ft_strlower(char *str);
+long	ft_atol(const char *nptr);
 
 typedef struct s_list
 {
