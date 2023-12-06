@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/12/04 16:10:53 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/06 09:41:30 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,11 @@
 #  define FALSE 0
 # endif
 
+# ifndef HEXADECIMAL
+#  define HEXADECIMAL "0123456789abcdef"
+# endif
+
+int		ft_atoi_base(const char *str, int base, const char *charset);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_isprint(int c);
