@@ -1,7 +1,7 @@
 # Libft
 This project goal is to write my own C library , with some reproductions of libc, stdlib and other sources functions.
 
-<p align="center"
+<p align="center">
     <img src="./printscreen.png"/>
 </p>
 
