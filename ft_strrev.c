@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 09:45:14 by pdrago            #+#    #+#             */
-/*   Updated: 2023/12/06 09:49:50 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/06 09:57:19 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strrev(const char *str)
 {
+	int		len;
+	int		count;
 	char	*rev;
-	int	len;
-	int	count;
 
 	len = ft_strlen(str);
 	count = -1;

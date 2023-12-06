@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/12/06 09:51:44 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/06 09:57:36 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,18 @@
 
 # ifndef HEXADECIMAL
 #  define HEXADECIMAL "0123456789abcdef"
+# endif
+
+# ifndef BINARY
+#  define BINARY "01"
+# endif
+
+# ifndef DECIMAL
+#  define DECIMAL "0123456789"
+# endif
+
+# ifndef OCTAL
+#  define OCTAL "012345678"
 # endif
 
 int		ft_atoi_base(const char *str, int base, const char *charset);
