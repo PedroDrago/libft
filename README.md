@@ -56,11 +56,5 @@ This project goal is to write my own C library , with some reproductions of libc
 
 ### Set up for use
 ```bash
-git clone git@github.com:PedroDrago/libft.git libft && rm -rf libft/README.md libft/.gitignore libft/.git
+git clone git@github.com:PedroDrago/libft.git libft && rm -rf libft/README.md libft/.gitignore libft/.git libft/printscreen.png libft/to-do.md
 ```
-
-
-### To-implement
-- itoa-base
-- atoi-base
-- Try to refactor GNL to a single file
