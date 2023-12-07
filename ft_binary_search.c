@@ -1,38 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_binary_search.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 21:57:14 by pdrago            #+#    #+#             */
-/*   Updated: 2023/12/07 00:05:08 by pdrago           ###   ########.fr       */
+/*   Created: 2023/12/06 23:56:02 by pdrago            #+#    #+#             */
+/*   Updated: 2023/12/07 00:01:34 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-/*
-The ft_strchr() function returns a pointer to the 
-first occurrence of the character c in the string s.
-*/
-
-char	*ft_strchr(const char *s, int c)
+int	ft_binary_search(int size, int array[], int wanted)
 {
-	char	*ptrc;
-	int		count;
+	int	index;
+	int	start;
+	int	end;
 
-	count = 0;
-	ptrc = 0;
-	while (s[count])
+	start = 0;
+	end = size - 1;
+	while (start <= end)
 	{
-		if (s[count] == c)
+		index = start + ((end - start) / 2);
+		if (array[index] == wanted)
+			return (index);
+		else
 		{
-			ptrc = (char *) &s[count];
-			return (ptrc);
+			if (array[index] > wanted)
+				end = index - 1;
+			else
+				start = index + 1;
 		}
-		count++;
 	}
-	if (s[count] == c)
-		ptrc = (char *) &s[count];
-	return (ptrc);
+	return (-1);
 }
