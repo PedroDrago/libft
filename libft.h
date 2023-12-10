@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/12/10 00:31:40 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 00:33:53 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,10 @@
 # ifndef OCTAL
 #  define OCTAL "012345678"
 # endif
+
+
+//Sum int `a` with int `b` and returns the result ### Markdown test  --- safer.
+int	sum(int a, int b);
 
 /*
 Converts the initial portion of the string pointed 
