@@ -6,13 +6,9 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 20:56:50 by pdrago            #+#    #+#             */
-/*   Updated: 2023/11/01 12:20:41 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 00:25:31 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-checks for a digit (0 through 9).
-*/
 
 int	ft_isdigit(int c)
 {

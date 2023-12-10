@@ -6,16 +6,11 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:31:01 by pdrago            #+#    #+#             */
-/*   Updated: 2023/11/01 12:25:04 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 00:24:52 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-The  ft_memcpy()  function copies n bytes from memory area 
-src to memory area dest.  The memory areas must not overlap.
-*/
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

@@ -6,14 +6,9 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 20:56:50 by pdrago            #+#    #+#             */
-/*   Updated: 2023/11/01 12:20:55 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 00:25:38 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-checks for an alphanumeric character, 
-it is equivalent to (ft_isalpha(c) || ft_isdigit(c)).
-*/
 
 int	ft_isalnum(int c)
 {

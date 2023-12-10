@@ -6,16 +6,11 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 08:39:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/11/01 12:25:10 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 00:24:50 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-Copies n bytes from a source memory area to a destine 
-memory area. The areas may overlap.
-*/
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

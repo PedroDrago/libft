@@ -1,20 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:28:33 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/17 13:16:14 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 00:25:21 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-Adds the node ’new’ at the end of the list.
-*/
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

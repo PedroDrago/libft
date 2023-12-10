@@ -6,14 +6,9 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 21:57:14 by pdrago            #+#    #+#             */
-/*   Updated: 2023/11/01 12:23:44 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 00:24:06 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-The ft_strrchr() function returns a pointer to the last 
-occurrence of the character c in the string s.
-*/
 
 char	*ft_strrchr(const char *s, int c)
 {

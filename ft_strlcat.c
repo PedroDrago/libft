@@ -6,16 +6,11 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 10:10:22 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/18 15:39:04 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 00:24:22 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-Appends at most size - ft_strlen(destine - 1) bytes from a
-NUL-terminated source string to the end of a destine string.
-*/
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {

@@ -6,17 +6,11 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/06 00:49:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/10/18 13:44:24 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 00:24:03 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-Allocates (with malloc(3)) and returns a copy of
-’s1’ with the characters specified in ’set’ removed
-from the beginning and the end of the string.
-*/
 
 char	*ft_strtrim(char const *s1, char const *set)
 {

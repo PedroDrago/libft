@@ -6,15 +6,9 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 21:22:22 by pdrago            #+#    #+#             */
-/*   Updated: 2023/11/01 12:19:57 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 00:25:52 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-The ft_atoi() function converts the initial portion of the string pointed 
-to by nptr to int. The string may begin with arbitrary amount of whitespace
-determined by isspace(3), followed by a single optional '+' or '-' sign.
-*/
 
 int	ft_atoi(const char *nptr)
 {

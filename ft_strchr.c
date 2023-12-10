@@ -6,15 +6,11 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 21:57:14 by pdrago            #+#    #+#             */
-/*   Updated: 2023/12/07 00:05:08 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 00:24:34 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-The ft_strchr() function returns a pointer to the 
-first occurrence of the character c in the string s.
-*/
 
 char	*ft_strchr(const char *s, int c)
 {
