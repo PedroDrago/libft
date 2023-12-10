@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:28:33 by pdrago            #+#    #+#             */
-/*   Updated: 2023/12/10 12:37:33 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 12:42:56 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ void	ft_lstadd_back(t_list *lst, t_node *new)
 			current = current->next;
 		current->next = new;
 	}
+	lst->size++;
 }

@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/12/10 12:39:19 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 12:43:31 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -316,11 +316,8 @@ typedef struct s_node
 typedef struct s_list
 {
 	t_node	*head;
+	size_t	size;
 }	t_list;
-/*
-Counts the number of nodes in a list.
-*/
-int		ft_lstsize(t_list *lst);
 /*
 Adds the node `new` at the beginning of the list
 */
