@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/12/10 00:33:53 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 12:34:23 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -303,18 +303,22 @@ Set all characters from string `str` to lowercase
 */
 void	ft_strlower(char *str);
 /*
-Converts the initial portion of the string pointed 
-to by `nptr` to `long`. The string may begin with arbitrary amount of whitespace
-determined by `isspace(3)`, followed by a single optional `+` or `-` sign.
+* Converts the initial portion of the string pointed 
+* to by `nptr` to `long`. The string may begin with arbitrary amount of whitespace
+* determined by `isspace(3)`, followed by a single optional `+` or `-` sign.
 */
 long	ft_atol(const char *nptr);
 
-typedef struct s_list
+typedef struct s_node
 {
 	void			*content;
-	struct s_list	*next;
-}	t_list;
+	struct s_node	*next;
+}	t_node;
 
+typedef struct s_list
+{
+	t_node	*head;
+}	t_list;
 /*
 Counts the number of nodes in a list.
 */
@@ -322,18 +326,18 @@ int		ft_lstsize(t_list *lst);
 /*
 Adds the node `new` at the beginning of the list
 */
-void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list *lst, t_node *new);
 /*
 Adds the node `new` at the end of the list.
 */
-void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list *lst, t_node *new);
 /*
 Takes as a parameter a node and frees the memory of
 the node’s content using the function `del` given
 as a parameter and free the node. The memory of
 `next` must not be freed.
 */
-void	ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstdelone(t_node *node, void (*del)(void*));
 /*
 Deletes and frees the given node and every
 successor of that node, using the function `del`
@@ -341,7 +345,7 @@ and free(3).
 Finally, the pointer to the list must be set to
 `NULL`.
 */
-void	ft_lstclear(t_list **lst, void (*del)(void*));
+void	ft_lstclear(t_list *lst, void (*del)(void*));
 /*
 Iterates the list `lst` and applies the function
 `f` on the content of each node.
@@ -353,11 +357,16 @@ The member variable `content` is initialized with
 the value of the parameter `content`. The variable
 `next` is initialized to NULL.
 */
-t_list	*ft_lstnew(void *content);
+t_node	*ft_newnode(void *content);
+/*
+Allocates with `malloc()` and returns a 
+new list ponter
+*/
+t_list	*ft_lstnew();
 /*
 Returns the last node of the list.
 */
-t_list	*ft_lstlast(t_list *lst);
+t_node	*ft_lstlast(t_list *lst);
 /*
 Iterates the list `lst` and applies the function
 `f` on the content of each node. Creates a new

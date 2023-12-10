@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/12 14:26:27 by pdrago            #+#    #+#             */
-/*   Updated: 2023/12/10 00:23:49 by pdrago           ###   ########.fr       */
+/*   Created: 2023/12/10 12:24:13 by pdrago            #+#    #+#             */
+/*   Updated: 2023/12/10 12:26:33 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+t_list	*ft_lstnew()
 {
-	t_list	*current;
+	t_list	*list;
 
-	current = lst;
-	while (current)
-	{
-		if (!(current->next))
-			break ;
-		current = current->next;
-	}
-	return (current);
+	list = (t_list *) malloc (sizeof(t_list *));
+	if (!list)
+		return (NULL);
+	list->head = NULL;
+	return (list);
 }
