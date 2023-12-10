@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/12/10 12:34:23 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/12/10 12:39:19 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,6 @@
 # ifndef OCTAL
 #  define OCTAL "012345678"
 # endif
-
-
-//Sum int `a` with int `b` and returns the result ### Markdown test  --- safer.
-int	sum(int a, int b);
 
 /*
 Converts the initial portion of the string pointed 
@@ -304,8 +300,10 @@ Set all characters from string `str` to lowercase
 void	ft_strlower(char *str);
 /*
 * Converts the initial portion of the string pointed 
-* to by `nptr` to `long`. The string may begin with arbitrary amount of whitespace
-* determined by `isspace(3)`, followed by a single optional `+` or `-` sign.
+* to by `nptr` to `long`. The string may begin with
+* arbitrary amount of whitespace
+* determined by `isspace(3)`, followed by a single
+* optional `+` or `-` sign.
 */
 long	ft_atol(const char *nptr);
 
@@ -362,7 +360,7 @@ t_node	*ft_newnode(void *content);
 Allocates with `malloc()` and returns a 
 new list ponter
 */
-t_list	*ft_lstnew();
+t_list	*ft_lstnew(void);
 /*
 Returns the last node of the list.
 */

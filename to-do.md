@@ -1,5 +1,6 @@
 # To-do
 
+- test if linked list functions still work.
 - Implement itoa-base (almost done in printf).
 - Update Readme documentation.
 - Write short functions descriptions in header, so the LSP shows it.
