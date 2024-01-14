@@ -6,7 +6,7 @@
 #    By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/17 19:50:18 by pdrago            #+#    #+#              #
-#    Updated: 2024/01/14 11:24:53 by pdrago           ###   ########.fr        #
+#    Updated: 2024/01/14 11:32:10 by pdrago           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ $(NAME): $(OBJ)
 	@echo "$(GREEN)finished compiling libft$(ENDCOLOR)"
 
 .c.o:
-	@cc $(FLAGS) -c $< -o $@
+	cc $(FLAGS) -c $< -o $@
 
 clean:
 	@rm -f $(OBJ) a.out
