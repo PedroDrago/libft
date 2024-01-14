@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2023/12/10 12:43:31 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/01/14 11:14:46 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
+# include "list/list.h"
+# include "stack/stack.h"
+# include "queue/queue.h"
 # include "get_next_line/get_next_line.h"
 
 # ifndef INT_MIN
@@ -44,22 +47,6 @@
 
 # ifndef FALSE
 #  define FALSE 0
-# endif
-
-# ifndef HEXADECIMAL
-#  define HEXADECIMAL "0123456789abcdef"
-# endif
-
-# ifndef BINARY
-#  define BINARY "01"
-# endif
-
-# ifndef DECIMAL
-#  define DECIMAL "0123456789"
-# endif
-
-# ifndef OCTAL
-#  define OCTAL "012345678"
 # endif
 
 /*
@@ -307,68 +294,5 @@ void	ft_strlower(char *str);
 */
 long	ft_atol(const char *nptr);
 
-typedef struct s_node
-{
-	void			*content;
-	struct s_node	*next;
-}	t_node;
-
-typedef struct s_list
-{
-	t_node	*head;
-	size_t	size;
-}	t_list;
-/*
-Adds the node `new` at the beginning of the list
-*/
-void	ft_lstadd_front(t_list *lst, t_node *new);
-/*
-Adds the node `new` at the end of the list.
-*/
-void	ft_lstadd_back(t_list *lst, t_node *new);
-/*
-Takes as a parameter a node and frees the memory of
-the node’s content using the function `del` given
-as a parameter and free the node. The memory of
-`next` must not be freed.
-*/
-void	ft_lstdelone(t_node *node, void (*del)(void*));
-/*
-Deletes and frees the given node and every
-successor of that node, using the function `del`
-and free(3).
-Finally, the pointer to the list must be set to
-`NULL`.
-*/
-void	ft_lstclear(t_list *lst, void (*del)(void*));
-/*
-Iterates the list `lst` and applies the function
-`f` on the content of each node.
-*/
-void	ft_lstiter(t_list *lst, void (*f)(void *));
-/*
-Allocates (with malloc(3)) and returns a new node.
-The member variable `content` is initialized with
-the value of the parameter `content`. The variable
-`next` is initialized to NULL.
-*/
-t_node	*ft_newnode(void *content);
-/*
-Allocates with `malloc()` and returns a 
-new list ponter
-*/
-t_list	*ft_lstnew(void);
-/*
-Returns the last node of the list.
-*/
-t_node	*ft_lstlast(t_list *lst);
-/*
-Iterates the list `lst` and applies the function
-`f` on the content of each node. Creates a new
-list resulting of the successive applications of
-the function `f`. The `del` function is used to
-delete the content of a node if needed.
-*/
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 #endif
