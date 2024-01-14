@@ -6,12 +6,11 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 11:04:30 by pdrago            #+#    #+#             */
-/*   Updated: 2024/01/14 11:04:53 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/01/14 11:49:33 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
-
 
 t_stacknode	*pop(t_stack *stack)
 {

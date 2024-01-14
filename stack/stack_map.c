@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 11:11:21 by pdrago            #+#    #+#             */
-/*   Updated: 2024/01/14 11:13:42 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/01/14 11:49:27 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ static void	ft_free_all(t_stack *new, int free_content)
 	free(new);
 }
 
-t_stack *queue_map(t_stack *stack, void *(*func)(void *), int free_content)
+t_stack	*queue_map(t_stack *stack, void *(*func)(void *), int free_content)
 {
 	t_stacknode	*current;
 	t_stacknode	*new_node;
-	t_stack	*new_stack;
-	
+	t_stack		*new_stack;
+
 	if (!stack || !stack->bottom || !func)
 		return (NULL);
 	new_stack = stack_newstack();

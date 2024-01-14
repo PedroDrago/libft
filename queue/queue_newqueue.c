@@ -6,13 +6,13 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 10:43:08 by pdrago            #+#    #+#             */
-/*   Updated: 2024/01/14 10:53:28 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/01/14 11:43:20 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "queue.h"
 
-t_queue *queue_newqueue()
+t_queue	*queue_newqueue(void)
 {
 	t_queue	*queue;
 

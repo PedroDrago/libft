@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:46:24 by pdrago            #+#    #+#             */
-/*   Updated: 2024/01/14 10:16:37 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/01/14 11:45:31 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static void	ft_free_all(t_list *new, int free_content)
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), int free_content)
 {
 	t_listnode	*new_node;
-	t_list	*new_list;
+	t_list		*new_list;
 
 	if (!f || !lst)
 		return (NULL);

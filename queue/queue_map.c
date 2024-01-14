@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/12 14:46:24 by pdrago            #+#    #+#             */
-/*   Updated: 2024/01/14 11:00:45 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/01/14 11:42:49 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ t_queue	*queue_map(t_queue *queue, void *(*func)(void *), int free_content)
 {
 	t_queuenode	*current;
 	t_queuenode	*new_node;
-	t_queue	*new_queue;
-	
+	t_queue		*new_queue;
+
 	if (!queue || !queue->tail || !func)
 		return (NULL);
 	new_queue = queue_newqueue();

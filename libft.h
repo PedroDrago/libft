@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2024/01/14 11:14:46 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/01/14 11:42:28 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,14 +177,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 Allocates (with malloc(3)) and returns a new
 string, which is the result of the concatenation
 of `s1` and `s2`.
+
+If flag is passed as `1` it will free `s1`
+If flag is passed as `2` it will free `s2`
+If flag is passed as `3` it will free both `s1 and `s2`
+Otherwise it won't free any string
 */
-char	*ft_strjoin(char const *s1, char const *s2);
-/*
-Allocates (with malloc(3)) and returns a new
-string, which is the result of the concatenation
-of `s1` and `s2`, and frees (with free()) `s1`.
-*/
-char	*ft_strjoinfree(char *s1, char *s2);
+char	*ft_strjoin(char const *s1, char const *s2, int should_free);
 /*
 Allocates (with malloc(3)) and returns a copy of
 `s1` with the characters specified in `set` removed
@@ -293,6 +292,5 @@ void	ft_strlower(char *str);
 * optional `+` or `-` sign.
 */
 long	ft_atol(const char *nptr);
-
 
 #endif

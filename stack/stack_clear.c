@@ -6,12 +6,11 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/14 11:06:42 by pdrago            #+#    #+#             */
-/*   Updated: 2024/01/14 11:08:23 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/01/14 11:49:09 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stack.h"
-
 
 void	stack_clear(t_stack *stack, int free_content)
 {
