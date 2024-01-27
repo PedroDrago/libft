@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 20:36:52 by pdrago            #+#    #+#             */
-/*   Updated: 2024/01/26 21:21:23 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/01/26 23:42:56 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,12 @@ void	*resize(t_hashmap *map)
 	count = 0;
 	while (count < map->current_size)
 	{
-		newmap->array[count] = map->array[count];
+		if (map->array[count] != NULL)
+			newmap->array[poor_hash(map->array[count]->key)
+				% newmap->max_size] = map->array[count];
 		count++;
 	}
 	destroy_map(map);
-	while (count < newmap->max_size)
-	{
-		newmap->array[count] = NULL;
-		count++;
-	}
 	map = newmap;
 	return (map);
 }

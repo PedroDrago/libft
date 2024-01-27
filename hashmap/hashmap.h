@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 18:59:37 by pdrago            #+#    #+#             */
-/*   Updated: 2024/01/26 21:39:22 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/01/26 21:39:42 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ typedef struct s_hashmap
 	unsigned int			current_size;
 	t_hashnode				**array;
 }	t_hashmap;
+
 unsigned long	poor_hash(unsigned char *key);
 t_hashnode		*create_hashnode(unsigned char *key,
 					void *value, int allocation_flag);
