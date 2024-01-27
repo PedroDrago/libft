@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2024/01/14 11:42:28 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/01/26 19:01:41 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include "list/list.h"
 # include "stack/stack.h"
 # include "queue/queue.h"
+# include "hashmap/hashmap.h"
 # include "get_next_line/get_next_line.h"
 
 # ifndef INT_MIN
