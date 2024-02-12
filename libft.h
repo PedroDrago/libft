@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2024/02/09 21:16:51 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/02/10 22:55:20 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -199,7 +199,7 @@ If flag is passed as O_TWO it will free `s2`
 If flag is passed as O_BOTH it will free both `s1 and `s2`
 Otherwise it won't free any string (you can pass O_NONE for readability purposes)
 */
-char	*ft_strjoin(char const *s1, char const *s2, int should_free);
+char	*ft_strjoin(char *s1, char *s2, int should_free);
 /*
 Allocates (with malloc(3)) and returns a copy of
 `s1` with the characters specified in `set` removed
