@@ -55,14 +55,3 @@ char	*ft_splitjoin(char **splited)
 	joined[x] = '\0';
 	return (joined);
 }
-
-int	main(int argc, char *argv[])
-{
-	char	**splited;
-	char	*joined;
-
-	splited = ft_split("teste para ver se funciona", ' ');
-	joined = ft_splitjoin(splited);
-	printf("%s\n", joined);
-	(void)argc, (void)argv;
-}
