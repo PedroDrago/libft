@@ -46,20 +46,20 @@
 #  define FALSE 0
 # endif
 
-# ifndef O_BOTH
-#  define O_BOTH 3
+# ifndef FREE_BOTH
+#  define FREE_BOTH 3
 # endif
 
-# ifndef O_NONE
-#  define O_NONE 0
+# ifndef FREE_NONE
+#  define FREE_NONE 0
 # endif
 
-# ifndef O_ONE
-#  define O_ONE 1
+# ifndef FREE_ONE
+#  define FREE_ONE 1
 # endif
 
-# ifndef O_TWO
-#  define O_TWO 2
+# ifndef FREE_TWO
+#  define FREE_TWO 2
 # endif
 /*
 Converts the initial portion of the string pointed 
