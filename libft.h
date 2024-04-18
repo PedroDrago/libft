@@ -6,7 +6,7 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2024/04/18 18:01:50 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/04/18 18:10:49 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,7 +180,7 @@ of `s1` and `s2`.
 If flag is passed as O_ONE it will free `s1`
 If flag is passed as O_TWO it will free `s2`
 If flag is passed as O_BOTH it will free both `s1 and `s2`
-If flag is passed as NULL it won't free neither
+If flag is passed as 0 it won't free neither
 */
 char			*ft_strjoin(char *s1, char *s2, int should_free);
 /*
