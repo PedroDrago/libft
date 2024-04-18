@@ -14,11 +14,11 @@
 
 static void	free_vars(char *s1, char *s2, int should_free)
 {
-	if (should_free == O_ONE)
+	if (should_free == FREE_ONE)
 		free (s1);
-	else if (should_free == O_TWO)
+	else if (should_free == FREE_TWO)
 		free (s2);
-	else if (should_free == O_BOTH)
+	else if (should_free == FREE_BOTH)
 	{
 		free (s1);
 		free (s2);
