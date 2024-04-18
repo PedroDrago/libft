@@ -48,5 +48,5 @@
 
 ### Kickstart
 ```bash
-git clone git@github.com:PedroDrago/libft.git libft && rm -rf libft/README.md libft/.gitignore libft/.git libft/printscreen.png libft/to-do.md && cd libft && make && cd ..
+git clone git@github.com:PedroDrago/libft.git libft && rm -rf libft/README.md libft/.gitignore libft/.git libft/printscreen.png
 ```
