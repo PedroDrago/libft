@@ -127,17 +127,8 @@ that differ in `s1` and `s2`.
 If `n` is zero, the return value is zero.
 */
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-/*
-Returns the index of the 
-first occurrence of the character `c` in the string `s`.
-
-If the character is not found it returns -1.
-*/
-int		ft_strchr_idx(const char *str, char c);
 //Writes a formatted output to stdout.
 int		ft_printf(const char *str, ...);
-//Searches for the `wanted` in an ordered `int` array.
-int		ft_binary_search(int size, int array[], int wanted);
 /*
 Calculates and returns the length of the 
 string pointed to by `s`, excluding the terminating null byte (`\0`).
