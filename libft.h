@@ -319,7 +319,7 @@ char			*ft_splitjoin(char **splited);
  */
 char			*ft_splitjoin_sep(char **splited, char sep);
 /*
- * Return the length (Quantity of strings) in `splited`.
+ * Return the length of `splited`.
  */
 int				ft_splitlen(char **splited);
 #endif
