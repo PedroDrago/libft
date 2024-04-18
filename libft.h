@@ -16,10 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
-# include "list/list.h"
-# include "stack/stack.h"
-# include "queue/queue.h"
-# include "hashmap/hashmap.h"
 # include "get_next_line/get_next_line.h"
 
 # ifndef INT_MIN
