@@ -5,14 +5,43 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 16:45:11 by pdrago            #+#    #+#             */
-/*   Updated: 2023/11/16 23:12:02 by pdrago           ###   ########.fr       */
+/*   Created: 2024/04/18 18:33:22 by pdrago            #+#    #+#             */
+/*   Updated: 2024/04/18 18:33:59 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
-char	*dup_pre_n(char *buffer)
+static char	*gnl_join(char *s1, char *s2)
+{
+	char	*joined;
+	int		count;
+
+	joined = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!joined)
+		return (NULL);
+	count = 0;
+	if (s1)
+	{
+		while (s1[count])
+		{
+			joined[count] = s1[count];
+			count++;
+		}
+		free (s1);
+	}
+	while (*s2)
+		joined[count++] = *s2++;
+	joined[count] = '\0';
+	if (!(*joined))
+	{
+		free (joined);
+		return (NULL);
+	}
+	return (joined);
+}
+
+static char	*dup_pre_n(char *buffer)
 {
 	int		count;
 	int		flag;
@@ -40,7 +69,7 @@ char	*dup_pre_n(char *buffer)
 	return (pre_n);
 }
 
-char	*dup_post_n(char *buffer)
+static char	*dup_post_n(char *buffer)
 {
 	int		count;
 	int		count2;
@@ -56,7 +85,7 @@ char	*dup_post_n(char *buffer)
 		return (NULL);
 	}
 	count++;
-	post_n = (char *) malloc (sizeof(char) * (gnl_len(buffer) - count) + 1);
+	post_n = (char *) malloc (sizeof(char) * (ft_strlen(buffer) - count) + 1);
 	if (!post_n)
 		return (NULL);
 	while (buffer[count + count2])
@@ -69,7 +98,7 @@ char	*dup_post_n(char *buffer)
 	return (post_n);
 }
 
-char	*read_line(int fd)
+static char	*read_line(int fd)
 {
 	static char	*hold[MAX_FD];
 	char		*buffer;
@@ -79,7 +108,7 @@ char	*read_line(int fd)
 	if (!buffer)
 		return (NULL);
 	bytes = 1;
-	while (bytes > 0 && !has_break_line(hold[fd]))
+	while (bytes > 0 && !ft_strchr(hold[fd], '\n'))
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
 		if (bytes < 0)
@@ -88,7 +117,7 @@ char	*read_line(int fd)
 			return (NULL);
 		}
 		buffer[bytes] = '\0';
-		hold[fd] = ft_joinfree(hold[fd], buffer);
+		hold[fd] = gnl_join(hold[fd], buffer);
 	}
 	free (buffer);
 	if (!hold[fd])

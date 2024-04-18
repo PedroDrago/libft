@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 
 	count = 0;
 	ptrc = 0;
-	while (s[count])
+	while (s && s[count])
 	{
 		if (s[count] == c)
 		{
@@ -28,7 +28,7 @@ char	*ft_strchr(const char *s, int c)
 		}
 		count++;
 	}
-	if (s[count] == c)
+	if (s && s[count] == c)
 		ptrc = (char *) &s[count];
 	return (ptrc);
 }

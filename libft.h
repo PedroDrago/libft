@@ -6,14 +6,13 @@
 /*   By: pdrago <pdrago@student.42.rio>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 17:53:29 by pdrago            #+#    #+#             */
-/*   Updated: 2024/04/18 18:10:49 by pdrago           ###   ########.fr       */
+/*   Updated: 2024/04/18 18:34:20 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include "get_next_line/get_next_line.h"
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -57,6 +56,19 @@
 # ifndef FREE_TWO
 #  define FREE_TWO 2
 # endif
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+# ifndef MAX_FD
+#  define MAX_FD 1024
+# endif
+
+/*
+ * Reads one line at a time from a file descriptor.
+ */
+char			*get_next_line(int fd);
 /*
 Converts the initial portion of the string pointed
 to by `str` to `int`. The number in the string can
@@ -308,6 +320,6 @@ char			*ft_splitjoin(char **splited);
 char			*ft_splitjoin_sep(char **splited, char sep);
 /*
  * Return the length (Quantity of strings) in `splited`.
-*/
+ */
 int				ft_splitlen(char **splited);
 #endif
