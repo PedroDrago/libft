@@ -45,6 +45,18 @@
 #  define FREE_TWO 2
 # endif
 
+# ifndef O_BOTH
+#  define O_BOTH 3
+# endif
+
+# ifndef O_ONE
+#  define O_ONE 1
+# endif
+
+# ifndef O_TWO
+#  define O_TWO 2
+# endif
+
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
 # endif
