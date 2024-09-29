@@ -33,8 +33,8 @@
 #  define FALSE 0
 # endif
 
-# ifndef FREE_BOTH
-#  define FREE_BOTH 3
+# ifndef FREE_NONE
+#  define FREE_NONE 0
 # endif
 
 # ifndef FREE_ONE
@@ -45,8 +45,12 @@
 #  define FREE_TWO 2
 # endif
 
-# ifndef O_BOTH
-#  define O_BOTH 3
+# ifndef FREE_BOTH
+#  define FREE_BOTH 3
+# endif
+
+# ifndef O_NONE
+#  define O_NONE 0
 # endif
 
 # ifndef O_ONE
@@ -56,6 +60,11 @@
 # ifndef O_TWO
 #  define O_TWO 2
 # endif
+
+# ifndef O_BOTH
+#  define O_BOTH 3
+# endif
+
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42
